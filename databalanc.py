@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load your raw train set
-df = pd.read_csv(r"C:\Users\sarag\OneDrive\Desktop\excercise&homework\semester4\snlp\project\Toxicity-Recognition-Kaggle-2024\data\train_2025.tsv", sep='\t', quoting=3)
+df = pd.read_csv(r"data\train_2025.tsv", sep='\t', quoting=3)
 
 # Separate by class
 toxic_df = df[df['label'] == 1]
@@ -26,7 +26,7 @@ print(balanced_df["label"].value_counts())
 # print(balanced_df['label'].value_counts())
 
 # Save (optional)
-balanced_df.to_csv(r"C:\Users\sarag\OneDrive\Desktop\excercise&homework\semester4\snlp\project\Toxicity-Recognition-Kaggle-2024\data\balanced_train.tsv", sep='\t', index=False, quoting=3)
+balanced_df.to_csv(r "\dataset\balanced_train.tsv", sep='\t', index=False, quoting=3)
 # Count duplicates in toxic samples
 duplicate_count = df_toxic_oversampled.duplicated(subset=["text"]).sum()
 print(f"Number of duplicate toxic comments: {duplicate_count}") 
