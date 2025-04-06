@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load your raw train set
-df = pd.read_csv(r"data\train_2025.tsv", sep='\t', quoting=3)
+df = pd.read_csv(r"dataset\train_2025.tsv", sep='\t', quoting=3)
 
 # Separate by class
 toxic_df = df[df['label'] == 1]
