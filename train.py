@@ -20,7 +20,7 @@ from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from src.preprocessing import *
 from src.models import *
-
+from src.roberta_model import *
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Current device: {device}")
 
